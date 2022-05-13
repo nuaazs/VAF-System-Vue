@@ -117,7 +117,7 @@
 
 <script>
 export default {
-  name: "Home",
+  name: "about",
   data() {
     return {
       form: {

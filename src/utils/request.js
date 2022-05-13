@@ -1,12 +1,24 @@
+/*
+# ██╗██╗███╗   ██╗████████╗
+# ██║██║████╗  ██║╚══██╔══╝
+# ██║██║██╔██╗ ██║   ██║
+# ██║██║██║╚██╗██║   ██║
+# ██║██║██║ ╚████║   ██║
+# ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝
+# @Time    : 2022-05-10 19:56:36.000-05:00
+# @Author  : 𝕫𝕙𝕒𝕠𝕤𝕙𝕖𝕟𝕘
+# @email   : zhaosheng@nuaa.edu.cn
+# @Blog    : http://iint.icu/
+# @File    : 
+# @Describe: None
+*/
+
 /* eslint-disable no-unused-vars */
 //import db from './localstorage'
 import axios from "axios";
 import cookie from "js-cookie"
-// 统一配置,
-// let baseURL =  'http://www.lyxxkj.com.cn'//服务器运行
-// let baseURL =  'http://47.96.140.249:8070'//本地运行
-   let baseURL =  'http://192.168.0.85:8070'//本地运行
-// let baseURL =  'https://www.lyxxkj.com.cn'
+
+let baseURL =  'http://iint.icu:8170'
 let Axios = axios.create({
     baseURL: baseURL, // api 的 base_url
     responseType: 'json',
@@ -18,7 +30,7 @@ let Axios = axios.create({
 // let token = 'Bearer '+ cookie.get("XXX")
 
 
-// // http request 拦截器
+// http request 拦截器
 Axios.interceptors.request.use(
     config => {
         // 判断是否存在token，如果存在的话，则每个http header都加上tokendb("HEADER_AUTHORIZATION")
